@@ -1,0 +1,199 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Square Calculator</title>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="Enter a number:">
+    <button onclick="getSquare()">Submit</button>
+    <div id="Result">
+    </div>
+
+    <script>
+        function getSquare() {
+            var number = document.getElementById("num1").value;
+            var square = number * number;
+            console.log(`The Square of the number ${number} is ${square}`);
+            document.getElementById("Result").innerHTML = `The Square of the number ${number} is ${square}`;
+        }
+    </script>
+</body>
+</html> -->
+<!-- 
+<input type= "text" id = "num1" placeholder="Enter number 1">
+<input type = "text" id= "num2" placeholder="Enter number 2">
+
+<button onclick="getsum()">Submit</button>
+    <div id="Result">
+    </div>
+
+    <script>
+        function getsum() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num1").value;
+        
+            var sum = num1 + num2;
+            console.log(`The Sum of Numbers ${num1} and ${num2} is ${sum}}`)
+            document.getElementById("Result").innerHTML = `The sum of the numbers ${num1} and ${num2} is ${sum}`;
+        }
+    </script>
+
+ -->
+
+<!-- // Printing a Statement 'n' times
+
+<script>
+    n= 15
+    for(i=0;i<=n;i++){
+        console.log("Hello world"+i);
+
+    }
+</script> -->
+<!-- 
+// Program to print from one to num1
+
+<script>
+n=20;
+
+for(i=0;i<=n;i++){
+    console.log(i);
+}
+</script> -->
+
+
+<!-- 
+<script>
+    n=27770;
+    
+    for(i=0;i<=n;i++){
+        console.log(i**3);
+    }
+    </script>
+  -->
+<!-- 
+  <input type="text" id="num1" placeholder="Enter a number:">
+  <button onclick="getcube()">Submit</button>
+  <div id="Result"></div>
+
+  <script>
+      function getcube() {
+          var number = document.getElementById("num1").value;
+          var result = "";
+          for (let i = 1; i <= number; i++) {
+              let cube = i * i * i;
+              result += "Cube of " + i + " is: " + cube + "<br>";
+          }
+
+          console.log(result);
+          document.getElementById("Result").innerHTML = result;
+      }
+  </script>
+ -->
+
+<!-- 
+
+     <input type="text" id="n" placeholder="Enter a number:">
+     <button onclick="myTable()">Submit</button>
+     <div id="result"></div>
+ 
+     <script>
+         function myTable() {
+             let n = document.getElementById("n").value;
+             let result = "";
+ 
+             for(let i = 1; i <= n; i++) {
+                 result += n + " x" + i + " = " + (n * i) + "<br>";
+             }
+             document.getElementById("result").innerHTML = result;
+         }
+     </script>
+
+  -->
+
+<!-- 
+  <input type="text" id="n" placeholder="Enter a number:">
+  <button onclick="myTable()">Submit</button>
+  <div id="result"></div>
+
+  <script>
+      function myTable() {
+          let n = document.getElementById("n").value;
+          let result = "";
+
+          for(let i = n; i >= 1; i--) {
+
+
+              result += n + " * " + i + " = " + (n * i) + "<br>";
+          }
+          document.getElementById("result").innerHTML = result;
+      }
+  </script>
+
+   -->
+       <!-- <button onclick="runFizzBuzz()">Run Fizz Buzz</button>
+       <div id="result"></div>
+   
+       <script>
+           function runFizzBuzz() {
+               var resultDiv = document.getElementById("result");
+               resultDiv.innerHTML = ""; // Clear previous results
+               var n = 100;
+               
+               for(var i = 0; i < n; i++){
+                   var random_guess = Math.floor(Math.random() * 100); // Generate a random number between 0 and 99
+                   var result = "";
+   
+                   if(random_guess % 3 == 0 && random_guess % 5 == 0){
+                       result = "Fizz_Buzz";
+                   }
+                   else if(random_guess % 3 == 0){
+                       result = "Fizz";
+                   }
+                   else if(random_guess % 5 == 0){
+                       result = "Buzz";
+                   }
+                   else{
+                       result = random_guess;
+                   }
+   
+                   // Display the result in the div
+                   var p = document.createElement("p");
+                   p.textContent = result;
+                   resultDiv.appendChild(p);
+               }
+           }
+       </script>
+   
+    -->
+
+
+        <h1>Random Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100.</p>
+        <input type="number" id="guess" min="1" max="100">
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="feedback"></p>
+    
+        <script>
+            // Generate a random number between 1 and 100
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            let attempts = 0;
+    
+            function checkGuess() {
+                const userGuess = Number(document.getElementById('guess').value);
+                const feedback = document.getElementById('feedback');
+                attempts++;
+    
+                if (userGuess < 1 || userGuess > 100) {
+                    feedback.textContent = 'Please enter a number between 1 and 100.';
+                } else if (userGuess < randomNumber) {
+                    feedback.textContent = 'Too low! Try again.';
+                } else if (userGuess > randomNumber) {
+                    feedback.textContent = 'Too high! Try again.';
+                } else {
+                    feedback.textContent = `Congratulations! You guessed the correct number (${randomNumber}) in ${attempts} attempts.`;
+                }
+            }
+        </script>
+    
+    
+
